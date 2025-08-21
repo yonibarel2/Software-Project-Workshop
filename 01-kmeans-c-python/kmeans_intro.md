@@ -1,13 +1,13 @@
 # K-means - algorithm introduction
 
-## Problem setup:
+## Problem setup
 
 1. Assume we have n points, in d dimensional space: $p_i = (x_1, x_2, ..., x_d)$  
 2. The user selects: $k =$ number of clusters (groups), and "iterations" = the maximum number of times the algorithm will run.
 
 ---
 
-## Goal:
+## Goal
 
 Partition the n points into k clusters such that each point is close to its cluster’s mean (clusters may vary in size).
 
