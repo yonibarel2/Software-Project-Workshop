@@ -4,7 +4,7 @@
 
 ***Note:** Before reading this guide, read the main repository `RADME.md` file.*
 
-## Program Structure:
+## Program Structure
 **The program begins execution in the main() function and is organized into three main stages:** 
 
 **1. Points file validation and processing: Validate the points file. if valid, creates point list.**  
@@ -62,7 +62,7 @@ classDef main  fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
 
 ```
 
-## Functions API:
+## Functions API
 
 | <div align="center">Function Name</div> | Description | Parameters | Returns | Notes |
 |---|---|---|---|---|
@@ -78,7 +78,7 @@ classDef main  fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
 | <div align="center" style="background-color:#ffe4cc;">print_centroids</div> | Print k centroids (space-separated per row). | k (int), dim (int), centroids (double[k][dim]). | <div align="center">–</div> | <div align="center">Prints each centroid to stdout.</div> |
 
 
-## Usage:
+## Usage
 
 **1. Example command to run the program:**
 ```bash
