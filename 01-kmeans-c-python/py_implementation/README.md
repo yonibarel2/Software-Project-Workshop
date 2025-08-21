@@ -4,7 +4,7 @@
 
 ***Note:** Before reading this guide, read the main repository `RADME.md` file.*
 
-## Program Structure:
+## Program Structure
 **The program begins execution in the main() function and is organized into three main stages:** 
 
 **1. Points file validation and processing: Validate the points file. if valid, creates point list.**  
@@ -61,7 +61,7 @@ classDef main  fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
     class D1,D2,D3 part3
 
 ```
-## Functions API:
+## Functions API
 
 | <div align="center">Function Name</div> | Description | Args | Returns | Raises |
 |---|---|---|---|---|
@@ -74,7 +74,7 @@ classDef main  fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
 | <div align="center" style="background-color:#ffe4cc;">calculate_cluster_centroid</div> | Calculate the centroid of a cluster.<br><br>If the cluster is empty, returns a copy of 'last_centroid'. | cluster (list[list[float]]): Points in the cluster.<br>dim (int): Dimensionality of the points.<br>last_centroid: Previous centroid to keep if 'cluster' is empty. | list[float]: The centroid coordinates. | <div align="center">–</div> |
 | <div align="center" style="background-color:#f7f7f7;">round_coordinates</div> | Round each coordinate in each centroid to 4 decimal places. | <div align="center">–</div> | <div align="center">–</div> | <div align="center">–</div> |
 
-## Usage:
+## Usage
 
 **1. Example command to run the program:**
 ```bash
