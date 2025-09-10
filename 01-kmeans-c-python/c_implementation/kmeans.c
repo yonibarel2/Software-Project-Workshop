@@ -94,7 +94,7 @@ int stdin_validate_and_to_point_list(int *dim_out, int *n_out, Node *point_lst_h
         *new_node = (Node){0};
 
         status = read_and_check_row(dim_out, &new_node->point);
-        if (status == 0) {free(new_node); *n_out = points_list_len; return 1;} // EOF - no need to free for new. TODO: add free in end of program
+        if (status == 0) {free(new_node); *n_out = points_list_len; return 1;} // EOF - no need to free for new.
         else if (status == -1) {free(new_node); free_tail_and_point(point_lst_head); return -1;}
         else {
             curr_node->next = new_node;
@@ -131,11 +131,11 @@ static int read_and_check_row(int *dim, double **out_point) {
         len += 1;
         c = fgetc(stdin);
     }
-    /* ADD THIS: reject if EOF without newline */
+    /* reject if EOF without newline */
     if (c == EOF && len > 0) { free(buff); return -1;} // no final newline
     if (c == EOF && len == 0) {free(buff); return 0;} // End of file (might be empty)
 
-    if (c == '\r') { // check newline style and handle (\r or \n or \r\n).
+    if (c == '\r') { // check newline style and handle (\r or \n or \r\n) check newline style and handle (\r or \n or \r\n) - if was /r/n then need to skip extra char /n
         int d = fgetc(stdin);
         if (d != '\n' && d != EOF) {ungetc(d, stdin);}
     }
@@ -170,7 +170,7 @@ static int read_and_check_row(int *dim, double **out_point) {
         
         //for first point - check if need to allocate more memory in buffer
         if (*dim == 0 && point_len >= (int)max_dim) {          // simple grow (e.g., double)
-            max_dim *= 2;   // start from >100 if you want
+            max_dim *= 2;
             double *tmp = realloc(point, max_dim * sizeof(double));
             if(!tmp) {free(buff); free(point); return -1;}
             point = tmp;
@@ -179,7 +179,7 @@ static int read_and_check_row(int *dim, double **out_point) {
         //add coordinate to point        
         point[point_len] = coordinate;
         point_len ++; 
-        if ((*dim != 0) && (point_len > *dim)) {free(buff); free(point); return -1;} // if not first point and point_len != dim -> not vaild
+        if ((*dim != 0) && (point_len > *dim)) {free(buff); free(point); return -1;} // if not first point and point_len > dim -> not vaild
 
         if (!comma) break;
         p = comma + 1;
