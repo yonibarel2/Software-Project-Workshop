@@ -26,8 +26,8 @@ Each implementation is in a separate folder containing:
 **1. README.md:** Explains the functionality of the program.  
 **2. kmeans:** The program code (single file).  
 
-In addition, the folder includes:
+In addition, the folder includes:  
 **1. kmeans_intro.md:** K-means clusters algorithm explanation.  
-**2. kmeans_intro.pdf:** Original task description.  
-**2. tests folder** containing input files and corresponding expected output files for specific values of k and iterations (documented in test_readme.txt).
+**2. hw1_instructions.pdf:** Original task description.  
+**3. tests folder** containing input files and corresponding expected output files for specific values of k and iterations (documented in test_readme.txt).
 
