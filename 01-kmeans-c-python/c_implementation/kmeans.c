@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
 
     //Step 1: validate and create points list.
     Node *point_lst_head = malloc(sizeof(*point_lst_head));    //create list head.
-    if(!point_lst_head) {return -1;}
+    if(!point_lst_head) {exit(1);}
     *point_lst_head = (Node){0};
     int dim = 0, n = 0;
 
