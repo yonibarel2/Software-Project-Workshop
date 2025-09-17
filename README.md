@@ -1,16 +1,30 @@
-# Software Project Workshop  
+# Software Project Workshop
 
-## 📝 Overview  
-This project explores implementing clustering algorithms in **C** and **Python** with a focus on the **C-Python API** and integration with **NumPy**.  
-Algorithms implemented:
-- **K-Means Clustering** (C & Python)
-- **Symmetric Non-Negative Matrix Factorization (SymNMF)** (coming soon)
+## 📝 Overview
+This repository contains projects from the **Software Project Workshop**, focused on implementing **machine learning clustering algorithms** in both **C** and **Python**.  
+It demonstrates how to combine **C performance** with **Python usability** via the **C-Python API** and **NumPy** integration.
 
-## 🎯 Main Goal  
-Demonstrate how clustering algorithms can be implemented efficiently in **C** and exposed to **Python** via the **C-Python API**, leveraging **NumPy** for data handling.  
-The project aims to show both low-level performance and high-level usability by combining C speed with Python flexibility.
+## 📂 Repository Structure
+- **kmeans**  
+  From-scratch K-Means implementation in **C** and **Python**, with a simple CLI and input validation.  
+  👉 [See detailed README](kmeans/README.md)
 
-## 📌 Status  
-This repository will include **2 parts**.
-Currently, only **Part 01 – K-means Clustering (C & Python)** is available.  
-**Parts 02 - Symmetric Non-Negative Matrix Factorization (SymNMF)** will be added after completion of the final project.  
+- **final-project**  
+  Full **C implementation of SymNMF**, exposed to Python through a **C-Python API**.  
+  A pure Python implementation of **K-Means** is also included for comparison.  
+  The `analysis.py` module allows running both algorithms, comparing their **centroids** and evaluating clustering   quality using the **silhouette coefficient**.  
+  👉 [See detailed README](final-project/README.md)  
+
+## 🎯 Main Goal
+Show how clustering algorithms can be:
+
+- Implemented efficiently in **C**  
+- Exposed to **Python** via the **C-Python API**  
+- Integrated with **NumPy** for practical **ML workflows**  
+- Compared and analyzed to understand the **strengths and trade-offs of different clustering approaches** in various situations
+
+## 🚀 Skills & Technologies
+- **Languages**: C, Python  
+- **APIs**: C-Python API  
+- **Libraries**: NumPy  
+- **Tools**: Makefile, setuptools
