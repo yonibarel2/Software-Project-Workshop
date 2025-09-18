@@ -51,8 +51,8 @@ flowchart TD
 classDef part1 fill:#d6e4ff,stroke:#4a78d4,stroke-width:1px,color:#000;
 classDef part2 fill:#d9f2e4,stroke:#4a9c68,stroke-width:1px,color:#000;
 classDef part3 fill:#ffe4cc,stroke:#cc7a29,stroke-width:1px,color:#000;
-classDef Additional library routine: decomposition matrix :#f5d6eb,stroke:#a64ca6,stroke-width:1px,color:#000;
-classDef main  fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
+classDef part4 fill:#f5d6eb,stroke:#a64ca6,stroke-width:1px,color:#000;
+classDef main fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
 
     A("main()")
     A --> |Part 1: Points file validation and processing| B1
@@ -92,7 +92,8 @@ classDef main  fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
     class A main
     class B1,B2,B3,B4,B5 part1
     class C0,C1,C1a,C2,C3,C4,C5,C6 part2
-    class D,E,E1,E2,E3 part3
+    class D part3
+    class E,E1 part4
 ```
 
 ## Functions API
