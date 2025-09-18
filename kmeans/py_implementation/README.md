@@ -18,7 +18,6 @@ The algorithm runs for the specified number of iterations or stops earlier if th
 Once completed, the final centroids are rounded to four decimal places for alignment and then printed.
 
 ## Functions Graphic view
-***Note:** For best understanding, i recommend to look at the Graph whith  the function documentation file named `functions_doc.pdf`.*
 
 ```mermaid
 
