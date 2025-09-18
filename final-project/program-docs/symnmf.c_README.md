@@ -51,6 +51,7 @@ flowchart TD
 classDef part1 fill:#d6e4ff,stroke:#4a78d4,stroke-width:1px,color:#000;
 classDef part2 fill:#d9f2e4,stroke:#4a9c68,stroke-width:1px,color:#000;
 classDef part3 fill:#ffe4cc,stroke:#cc7a29,stroke-width:1px,color:#000;
+classDef Additional library routine: decomposition matrix :#f5d6eb,stroke:#a64ca6,stroke-width:1px,color:#000;
 classDef main  fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
 
     A("main()")
