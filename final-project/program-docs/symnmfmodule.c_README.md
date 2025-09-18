@@ -121,13 +121,19 @@ classDef main fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
 
 ## Usage
 
-This module is **not executed directly**.  
-It is compiled into a Python extension using the provided `setup.py`:
-
+**Step 1: Build the extension (via setup.py):**
 ```bash
 python3 setup.py build_ext --inplace
 ```
+*Note: This compiles symnmfmodule.c and links it with the C implementation (symnmf.c).*
 
-Running this command is necessary to build the extension and enable using the C library from Python.
+**Step 2: Import and use in Python:**
+
+`import symnmf_c_api as symnmf`  
+
+Example: compute the symmetric affinity matrix  
+`points = [[1.0, 2.0], [3.0, 4.0]]`  
+`A = symnmf.sym(points)`  
+`print(A)`  
 
 
