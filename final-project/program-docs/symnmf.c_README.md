@@ -118,5 +118,27 @@ classDef main fill:#f7f7f7,stroke:#999999,stroke-width:2px,color:#000;
 | <div align="center" style="background-color:#f7f7f7;">print_squared_matrix_floats_4f</div> | Print an `n×n` matrix with 4 decimals, comma-separated. | `n: int` • `mat: const double*` | – | Prints to `stdout`. |
 | <div align="center" style="background-color:#f7f7f7;">main</div> | Entry point: parse args, build matrix per `goal`, print result. | `argc: int` • `argv: char**` | `int`: `0` success (errors exit(1)) | Goals: `sym`, `ddg`, `norm`. |
 
+## Usage
+
+**Step 1: Compile `symnmf.c` into the `symnmf` executable using the Makefile:**
+
+```bash
+make
+```
+
+*Note: The Makefile is configured for strict ISO C90 compilation, with all warnings and errors enabled:*
+
+```bash
+gcc -ansi -Wall -Wextra -Werror -pedantic-errors
+```
+
+**Step 2: Run symnmf:** run
+```bash
+./symnmf [sym | ddg | norm] [points_file_name.txt]
+```
+
+
+
+
 
 
