@@ -1,4 +1,4 @@
-# setup.py, Makefile & symnmf.h — quick guide
+# setup.py, Makefile and symnmf.h — quick guide
 
 This short guide explains three important project files together: what they do, and how/when you should use them.
 
