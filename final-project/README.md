@@ -5,7 +5,7 @@ This project implements the **Symmetric Non-negative Matrix Factorization (SymNM
 2. Run SymNMF in **Python** via the C API.
 3. Run SymNMF in **Python** via the C API, **pure Python K-means** and compare silhouette scores of both.
 
-*Note: For further details, see `kmeans_intro.md`, `symnmf_intro.md`., `final-project.pdf`.*
+*Note: For further details, see `kmeans_intro.md`, `symnmf_intro.md`., `final_project_instructions.pdf`.*
 
 ## Inputs (passed as command line arguments)
 
