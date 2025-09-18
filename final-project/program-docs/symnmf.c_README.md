@@ -8,8 +8,10 @@ It also includes internal functions supporting the SymNMF decomposition algorith
 ## Program Structure
 **Execution starts in `main()` and is organized into three main stages:**  
 
-**1. Points file validation and processing: build a validated point list.**  
-The program reads the file row by row. The **first row** determines the dimension and initializes the list. Each subsequent row is parsed, validated against that dimension, and appended. Finally, the linked list is converted to a contiguous `n × dim` array.
+**1. Arguments & input validation and proccessing:**  
+- **Expect:** `goal (string)`, `path/to/points.txt`.
+- **Validate goal**: `goal ∈ {"symnmf","sym","ddg","norm"}`
+- **Points file validation and processing:** The program reads the file row by row. The **first row** determines the dimension and initializes the list. Each subsequent row is parsed, validated against that dimension, and appended to the points array.
 
 **2. Goal selection and matrix construction:**  
 Based on the `goal` argument (`sym`, `ddg`, or `norm`):  
