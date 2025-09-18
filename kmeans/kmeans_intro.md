@@ -120,7 +120,5 @@ Else → return to Step 2.
 - The algorithm is finite: $2 < \text{iterations} < k^n$.  
 - In some versions (like HW\_1) we set a maximum number of iterations to limit runtime.  
 - In each iteration, the SSE decreases or stays the same.  
-- For the project: if a cluster becomes empty, keep its centroid from the previous iteration until it gains points again.
-
+- For the project: if a cluster becomes empty, keep its centroid from the previous iteration until it gains points again.  
 - In each iteration, the SSE decreases or stays the same.  
-- For the project: if a cluster becomes empty, keep its centroid from the previous iteration until it gains points again.
