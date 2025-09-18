@@ -46,26 +46,18 @@ This project implements the **Symmetric Non-negative Matrix Factorization (SymNM
 [K-means Simulation](http://alekseynp.com/viz/k-means.html)
 
 ## Program Description
----
-# from here to do
-to explain that the repo contains a folder with all code files and helper files and then show what files in it - **program folder**: containing all the code 
-- **symnmf.c and symnmf.h:** For compiling and running the C and Python modules. header ios for use of the module
-- **Makefile:** For compiling and running the C and Python modules.  
-- **symnmfmodule.c:** For compiling and running the C and Python modules.
-- **symnmf.py:** For compiling and running the C and Python modules.  
-- **setup.py:** For compiling and running the C and Python modules.  for connecting to c
-- **kmeans.py:** For compiling and running the C and Python modules.  for connecting to c
-- **analysis.py:** For compiling and running the C and Python modules.  for connecting to c
 
+**1. program folder** The main folder with all source and helper files:
 
-This repository contains implementations of the SymNMF algorithm in both Python and C, along with a Python C API wrapper.  
-In addition, it includes a Python implementation of K-means, an analysis script for comparing their results, and support files such as `setup.py`, `Makefile`, and test data.
+- **README.md:** Explains the functionality of the programs and provides functions API.
+- **symnmf.c / symnmf.h** – C implementation of SymNMF and related goals; header for module use.  
+- **symnmfmodule.c** – Python C API wrapper for calling the C code from Python.  
+- **symnmf.py** – Python interface to run SymNMF (via API).  
+- **kmeans.py** – Pure Python implementation of K-means.  
+- **analysis.py** – Runs K-means and SymNMF, compares results with silhouette scores.  
+- **Makefile** – Builds the C program (`symnmf`).  
+- **setup.py** – Builds the Python C extension.
 
-**README.md:** Explains the program structure and what does
-**1. kmeans_intro.md:** K-means clusters algorithm explanation.
-**1. symnmf_intro.md:** K-means clusters algorithm explanation.
+**2. kmeans_intro.md:** K-means clusters algorithm explanation.  
+**3. symnmf_intro.md:** K-means clusters algorithm explanation.  
 **2. final_project_instructions.pdf:** Original task description.
-**2. functions api folder for all code files (containing 4 files).pdf:** Original task description.
-**3. tests folder** containing input files and corresponding expected output files for specific values of k and iterations (documented in test_readme.txt).
-
-
