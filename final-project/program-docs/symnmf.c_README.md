@@ -1,6 +1,6 @@
 # SymNMF – C implementation
 
-## This program reads a CSV file of points, constructs the requested matrix (`sym`, `ddg`, or `norm`), and prints it.  
+This program reads a CSV file of points, constructs the requested matrix (`sym`, `ddg`, or `norm`), and prints it.  
 It also includes internal functions supporting the SymNMF decomposition algorithm.
 
 ***Note:** Before reading this guide, read the main repository `README.md` file.*
