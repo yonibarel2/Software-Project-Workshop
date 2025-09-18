@@ -128,12 +128,13 @@ python3 setup.py build_ext --inplace
 *Note: This compiles symnmfmodule.c and links it with the C implementation (symnmf.c).*
 
 **Step 2: Import and use in Python:**
+```python
+# Example: compute the symmetric affinity matrix
 
-`import symnmf_c_api as symnmf`  
+import symnmf_c_api as symnmf
 
-Example: compute the symmetric affinity matrix  
-`points = [[1.0, 2.0], [3.0, 4.0]]`  
-`A = symnmf.sym(points)`  
-`print(A)`  
-
+points = [[1.0, 2.0], [3.0, 4.0]]
+A = symnmf.sym(points)
+print(A) 
+```
 
