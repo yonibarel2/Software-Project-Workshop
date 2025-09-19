@@ -56,7 +56,6 @@ $$
 p_1 = (1, 2) \quad p_2 = (5, 3) \quad p_3 = (2, 3) \quad p_4 = (7, 2) \quad p_5 = (1, 1)
 $$
 
----
 
 **Step 1 — Initialize centroids**  
 Pick the first $k$ points as centroids:  
@@ -65,7 +64,6 @@ $$
 \mu_1 = (1, 2) \quad \mu_2 = (5, 3)
 $$
 
----
 
 **Step 2 — Assign each point to its nearest centroid**  
 For each point, calculate the squared distance to both centroids and choose the nearest:
@@ -80,7 +78,6 @@ p_5 :& d(p_5, \mu_1) = 1 \quad d(p_5, \mu_2) = 20 \quad\Rightarrow\quad p_5 \in 
 \end{aligned}
 $$
 
----
 
 **Step 3 — Update centroids**  
 Compute the mean of each cluster:
@@ -93,7 +90,6 @@ $$
 \mu_2 = \left( \frac{5+7}{2}, \frac{3+2}{2} \right) = (6, 2.5)
 $$
 
----
 
 **Step 4 — Reassign points with updated centroids**  
 
@@ -107,11 +103,15 @@ p_5 :& d(p_5, \mu_1) = 1.11 \quad d(p_5, \mu_2) = 26.25 \quad\Rightarrow\quad p_
 \end{aligned}
 $$
 
----
 
 **Step 5 — Check condition**  
 If the assignment is the same as the previous iteration → stop algorithm and return clusters centroids.  
 Else → return to Step 2.
+
+---
+
+## Link to K-means demonstration:
+[K-means Simulation](http://alekseynp.com/viz/k-means.html)  
 
 ---
 
@@ -122,4 +122,5 @@ Else → return to Step 2.
 - In each iteration, the SSE decreases or stays the same.  
 - For the project: if a cluster becomes empty, keep its centroid from the previous iteration until it gains points again.  
 - In each iteration, the SSE decreases or stays the same.  
+
 
