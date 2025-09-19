@@ -1,6 +1,7 @@
 # final-project-code Folder
 
-This is the implementation folder — all runnable source code for the project lives here.
+This is the implementation folder - all runnable source code for the project lives here.  
+For further information about modules, read the documentation files in the program-docs folder.
 
 ## Contents
 - `symnmf.c` — Core C implementation of SymNMF.  
