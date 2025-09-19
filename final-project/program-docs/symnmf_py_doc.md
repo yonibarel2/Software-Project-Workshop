@@ -122,7 +122,7 @@ python3 setup.py build_ext --inplace
 
 *Note: This compiles the C sources (symnmf.c, symnmfmodule.c) and makes them importable as symnmf_c_api inside Python.*
 
-Step 2: Run `symnmf.py`:
+**Step 2: Run `symnmf.py`:**
 
 ```bash
 python3 symnmf.py [k] [symnmf | sym | ddg | norm] [points_file_name.txt]
