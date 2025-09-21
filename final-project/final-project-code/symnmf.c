@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
     if (linked_list_to_2d_array(point_lst_head, n, dim, &points) != 1) {printf("An Error Has Occurred\n"); free_list(point_lst_head); free(points), exit(1);} /* Convert the linked list to a 2D array and free linked list */
     free_list(point_lst_head); /* Even if success -> we have the 2D array and no need for linked list of points*/
 
-    /* Step 2: Run the algorithm determined by goal */
+    /*Step 2: run algorithm determined by "goal" - and print result*/
     if (strcmp(goal, "sym") == 0) { /* Step 4: run chosen algorithm (by goal) - and create n * n matrix */
         if (sym(dim, n,points, &sym_mat) == -1) {printf("An Error Has Occurred\n");free(points); exit(1);}
         print_squared_matrix_floats_4f(n, sym_mat); free(sym_mat);
