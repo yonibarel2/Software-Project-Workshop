@@ -49,9 +49,6 @@ For further details, see `kmeans_intro.md`, `symnmf_intro.md`., `final_project_i
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── **📄 symnmf_c_doc.md**: Documentation for `symnmf.c`.  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── **📄 symnmfmodule_c_doc.md**: Documentation for `symnmfmodule.c`.  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── **📄 setup_py_Makefile_symnmf_h.md**: Documentation for `setup.py`, `Makefile`, and `symnmf.h`.  
-├── **📂 tests**: A set of tests for the project.  
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── **📂 csv_points_txt_file_tests**: Documentation for `symnmfmodule.c`.  
-
 └──────
 # How To Use
 
