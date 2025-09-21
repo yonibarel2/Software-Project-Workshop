@@ -72,24 +72,30 @@ def main():
         # Step 1: validate args and create points list
         if len(sys.argv) != 3: # Argv num check (argv[1] = k,  argv[2] = file path)
             raise ValueError("An Error Has Occurred")
+            
         with open(sys.argv[2], "r") as f: # Validate and read pooints to List[Tuple[float, ...]]
             points = symnmf.file_validate_and_to_point_list(f)
+            
         k = int(sys.argv[1]) # Validate k
         if (not 1 < k < len(points)):
             raise ValueError("An Error Has Occurred")
+            
         # Step 2: symnmf -> get H and labels
         updated_decomp_mat = symnmf.calculate_final_decomp_mat(points, k)
         symnmf_label_list = H_to_symnmf_label_list(updated_decomp_mat)
         if len(set(symnmf_label_list)) < 2:
             raise ValueError("An Error Has Occurred")
+            
         # Step 3: kmeans -> get labels
         kmeans_label_list = clusters_to_kmeans_label_list(points, k, ITERATIONS, EPS)
         if len(set(kmeans_label_list)) < 2:
-            raise ValueError("An Error Has Occurred")      
+            raise ValueError("An Error Has Occurred") 
+            
         # Step 4: compute silhouette scores
         symnmf_score = silhouette_score(points, symnmf_label_list, metric="euclidean")
         kmeans_score = silhouette_score(points, kmeans_label_list, metric="euclidean")
-        # Print results (4 decimals)
+        
+        # Step 5: print results (4 decimals)
         print(f"nmf: {symnmf_score:.4f}")
         print(f"kmeans: {kmeans_score:.4f}")
     except (ValueError, OSError, MemoryError) as e:
