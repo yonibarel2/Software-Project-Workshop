@@ -52,17 +52,24 @@ int main(int argc, char **argv) {
     Node *point_lst_head;
     int dim = 0, n = 0;
     double *points = NULL, *sym_mat = NULL, *ddg_mat = NULL, *norm_mat = NULL;
-    if (argc !=  3) {printf("An Error Has Occurred\n"); exit(1);} /* Step 1: check argv and that goal is valid -> expecting argv[1] = goal, argv[2] = file_name */
+    
+    /* Step 1: check argv and that goal is valid -> expecting argv[1] = goal, argv[2] = file_name */
+    if (argc !=  3) {printf("An Error Has Occurred\n"); exit(1);}
+    
     goal = argv[1];
     if (strcmp(goal, "sym") != 0 && strcmp(goal, "ddg") != 0 && strcmp(goal, "norm") != 0) {printf("An Error Has Occurred\n"); exit(1);}
+    
     in = fopen(argv[2], "r"); if (!in) {printf("An Error Has Occurred\n"); exit(1);}
     point_lst_head = malloc(sizeof(*point_lst_head)); /* Step 2: validate and create points list. */
     if(!point_lst_head) {fclose(in); printf("An Error Has Occurred\n"); exit(1);}
     point_lst_head->next = NULL; point_lst_head->point = NULL;
     if (file_validate_and_to_point_list(in, &dim, &n, point_lst_head) != 1 || n <= 1) {printf("An Error Has Occurred\n"); free_list(point_lst_head); fclose(in); exit(1);}
     fclose(in);
-    if (linked_list_to_2d_array(point_lst_head, n, dim, &points) != 1) {printf("An Error Has Occurred\n"); free_list(point_lst_head); free(points), exit(1);} /* Step 3: convert the linked list to a 2D array and free linked list */
+    
+    if (linked_list_to_2d_array(point_lst_head, n, dim, &points) != 1) {printf("An Error Has Occurred\n"); free_list(point_lst_head); free(points), exit(1);} /* Convert the linked list to a 2D array and free linked list */
     free_list(point_lst_head); /* Even if success -> we have the 2D array and no need for linked list of points*/
+
+    /* Step 2: Run the algorithm determined by goal */
     if (strcmp(goal, "sym") == 0) { /* Step 4: run chosen algorithm (by goal) - and create n * n matrix */
         if (sym(dim, n,points, &sym_mat) == -1) {printf("An Error Has Occurred\n");free(points); exit(1);}
         print_squared_matrix_floats_4f(n, sym_mat); free(sym_mat);
@@ -273,9 +280,7 @@ int linked_list_to_2d_array(Node *head, int n, int dim, double **out_arr) {
     Node *p;
     int i, d;
 
-    if (!head || n <= 0 || dim <= 0 || !out_arr) {
-        return -1;
-    }
+    if (!head || n <= 0 || dim <= 0 || !out_arr) {return -1;}
 
     arr = malloc(n * dim * sizeof(double));
     if (!arr) {return -1;}
